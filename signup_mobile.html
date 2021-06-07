@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앱 회원가입</title>
+    <link rel = "preconnect"href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = EB + Garamond & display = swap"rel = "스타일 시트">
+    <style>
+        * {margin: 0; padding: 0;}
+        fieldset {border: 0;}
+        legend {position: absolute; left: -99999px;}
+        #form {
+            width: 375px;
+            height: 850px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+        }
+        #form h1 {
+            font-family : 'EB Garamond', serif;
+            background-color: #000;
+            width: 100%;
+            height: 50px;
+            color: #fff;
+            font-size: 20px;
+            line-height: 50px;
+            margin-right: 20px;
+            padding-left: 30px;
+            box-sizing: border-box;
+            letter-spacing: 2px;
+        }
+        #form h2 {
+            font-size: 22px;
+            margin: 20px 30px 40px;
+            width: 315px;
+            height: 50px;
+            border-bottom: 1px solid #DBD4D4;
+        }
+        #form h2::before{
+            content:'';
+            width: 315px;
+            height: 40px;
+            border-bottom: 1px solid #DBD4D4;
+            position: absolute;
+            top:290px;
+            left: 24px;
+            display: inline-block;
+        }
+        .name {
+            margin-top: 60px;
+        }
+        #form fieldset > div::after {
+            content:'';
+            display: block;
+            clear: both;
+        }
+        #form fieldset > div> label{
+            /*background-color: cornflowerblue;*/
+            margin-left: 30px;
+            color: #404040;
+            width: 120px;
+            float: left;
+            line-height: 42px;
+        }
+        input[type="text"], input[type="password"]{
+            width: 190px;
+            height: 40px;
+            margin-bottom: 8px;
+            border: 1px solid #ACABAB;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .birth input[type="text"] {
+            width: 60px;
+        }
+        input[type="radio"]{
+            margin: 8px;
+            line-height: 42px;
+        }
+        select {
+            width: 190px;
+            height: 40px;
+            border: 1px solid #ACABAB;
+            margin-bottom: 8px;
+
+        }
+        #form span{
+           height: 32px;
+           line-height: 32px;
+           padding: 10 5px;
+           letter-spacing: -2px;
+           font-size: 16px;
+           color: #ACABAB;
+        }
+        
+        input[type="button"]{
+            width: 315px;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+            margin-left: 30px;
+            color: #fff;
+            background-color: #8B8787;
+            border: 0;
+        }
+        input[type="submit"] {
+            width: 315px;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 20px;
+            margin-left: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4B4B48;
+            border: 0;
+        }
+        .mail label {
+            letter-spacing: -2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form action="" method="post" autocomplete="off">
+            <h1>BVLGARI</h1>
+            <h2>회원가입</h2>
+            <fieldset>
+                <legend>개인정보</legend>
+                <div>
+                    <label for="id">아이디</label>
+                    <input type="text" id="id" placeholder="이메일주소">
+                </div>
+
+                <div>
+                    <label for="pw"> 비밀번호</label>
+                    <input type="password" id="pw" placeholder="6 ~ 24자리 숫자 또는 문자">
+                </div>
+
+                <div>
+                    <label for="pass"> 비밀번호 확인</label>
+                    <input type="password" id="pass">
+                </div>
+
+                <div class="name">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder="실명 입력">
+                </div>
+
+                <div class="birth">
+                    <label>생년월일</label>
+                    <input type="text" name="birth"placeholder="1980">
+                    <input type="text" name="birth"placeholder="01">
+                    <input type="text" name="birth"placeholder="01">
+                </div>
+                
+                <div >
+                    <label>성별</label>
+                    <input type="radio" name="gender" value="man"><span>남</span> 
+                    <input type="radio" name="gender" value="woman"><span>여</span>
+                </div>
+
+                <div>
+                    <label for="ph">휴대전화</label>
+                    <input type="text" id="ph" placeholder="000-0000-0000">
+                </div>
+
+                <div>
+                    <label>지역</label>
+                    <select>
+                        <option>지역을 선택해주세요</option>
+                        <option>서울특별시</option>
+                        <option>인천광역시</option>
+                        <option>대전광역시</option>
+                        <option>대구광역시</option>
+                        <option>울산광역시</option>
+                        <option>부산광역시</option>
+                        <option>광주광역시</option>
+                        <option>세종특별자치시</option>
+                        <option>강원도</option>
+                        <option>충청도</option>
+                        <option>전라도</option>
+                        <option>경상도</option>
+                        <option>제주도</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="em">이메일</label>
+                    <input type="text" id="em"placeholder="green@naver.com">
+                </div>
+
+                <div class="mail">
+                    <label>이메일 수신여부</label>
+                    <input type="radio" name="mail" value="yes"><span>수신</span> 
+                    <input type="radio" name="mail" value="no"><span>수신 안함</span>
+                </div>
+
+                <input type="button" value="이용약관 (개인정보 취급 방침) 보기">
+                <input type="submit" value="회원가입">
+            </fieldset>
+        </form><!--#form end-->
+    </div>
+</body>
+</html>
